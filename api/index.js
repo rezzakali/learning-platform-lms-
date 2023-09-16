@@ -1,4 +1,5 @@
 import colors from 'colors';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 
@@ -14,6 +15,14 @@ colors.enable();
 
 // app instance
 const app = express();
+
+// cors policy
+app.use(
+  cors({
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  })
+);
 
 // routes
 app.get('/api/v1/test', (req, res) => {
