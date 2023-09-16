@@ -7,8 +7,8 @@
   "description": "A Learning Platform",
   "type": "module",
   "scripts": {
-    "start": "node api/index.js",
-    "server": "nodemon api/index.js"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
   "keywords": [
     "Express.js",
