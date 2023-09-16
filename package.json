@@ -1,0 +1,26 @@
+{
+  "name": "A Learning Platform (LMS)",
+  "author": "Rezzak",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "description": "A Learning Platform",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon api/index.js"
+  },
+  "keywords": [
+    "Express.js",
+    "MongoDB",
+    "Mongoose"
+  ],
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.2"
+  }
+}
