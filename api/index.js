@@ -2,9 +2,14 @@ import colors from 'colors';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import dbConnection from '../dbconfig/dbConnection.js';
 import errorHandler from '../middlewares/errorHandler.js';
 import userRoute from '../routes/userRoute.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // configure environment
 dotenv.config();
@@ -19,6 +24,10 @@ dbConnection();
 
 // app instance
 const app = express();
+
+// set ejs engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // body-parser
 app.use(express.json({ limit: '50mb' }));
